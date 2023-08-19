@@ -1,0 +1,55 @@
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Python
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+
+# git
+.gitconfig
+
+# editor
+.editorconfig
+
+# dist
+#dist
+
+# design
+_psd
+_psd-ie8
+_png
+_svg
+_design
+_mtr
+
+# file
+_doc
+_ref
+_ppt
+_bak
+_prototype
+debug.log
+
+# vscode
+.vscode
+
+# gradle
+.gradle
+out
+build
+gradle
+gradlew
+gradlew.bat
+
+
+# idea
+.idea
+*.iml
+
+
+
+# log
+*.log
