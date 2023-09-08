@@ -6,7 +6,9 @@ import (
 
 func TestGet(t *testing.T) {
 	client := NewClient()
-	response, err := client.Get("http://127.0.0.1:8989/user/add", Map{
+	client.EnableDump()
+	client.SetPrefix("http://127.0.0.1:8989/user/")
+	response, err := client.Get("/add", Map{
 		"id":     "1001",
 		"person": Map{"xx": "hh"},
 	})

@@ -39,6 +39,9 @@ func (client *Client) Request(method, url string, args ...any) (Response, error)
 	if len(args) > 0 {
 		data = args[0]
 	}
+	if client.prefix != "" && !strings.HasPrefix(url, "http") {
+		url = client.prefix + url
+	}
 	switch client.Header[ContentType] {
 	case ApplicationXml:
 		req, err = client.prepareXml(method, url, data)

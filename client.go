@@ -2,6 +2,7 @@ package httpclient
 
 import (
 	"net/http"
+	"strings"
 	"time"
 )
 
@@ -69,4 +70,13 @@ func (client *Client) AddResponseHandler(handler ...ResponseHandler) {
 
 func (client *Client) EnableDump() {
 	client.Dump = true
+}
+
+func (client *Client) SetPrefix(prefix string) {
+	if strings.HasPrefix(prefix, "http") {
+		if prefix[len(prefix)-1] == '/' {
+			prefix = prefix[:len(prefix)-1]
+		}
+		client.prefix = prefix
+	}
 }

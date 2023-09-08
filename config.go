@@ -9,6 +9,7 @@ type ClientConfig struct {
 	RequestHandler  []RequestHandler  // 对请求前做一些处理
 	ResponseHandler []ResponseHandler // 对响应做一些处理
 	Dump            bool
+	prefix          string // 前缀，例如 http://127.0.0.1:8080/api
 }
 
 // SetTimeout 超时
